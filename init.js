@@ -193,7 +193,11 @@ Bot.on("messageCreate", msg => {
 
        	case "centcom":
        	msg.reply("https://discord.gg/8syZQdqhwy").then(s => setTimeout(() => {
-       		s.delete();
+       	    try{
+       		    s.delete();
+       	    } catch (e) {
+       	        console.log(e.toString())
+       	    }
        	}, 5 * 1000));
        	break;
     };
