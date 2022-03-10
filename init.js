@@ -196,8 +196,8 @@ Bot.on("messageCreate", msg => {
        	    try{
        		    s.delete();
        	    } catch (e) {
-       	        console.log(e.toString())
-       	    }
+       	        console.log(e.toString());
+       	    };
        	}, 5 * 1000));
        	break;
     };
