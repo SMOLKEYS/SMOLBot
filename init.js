@@ -9,6 +9,7 @@ const Buttons = require("./buttons.js");
 const Fetch = require("node-fetch");
 const Git = require("github-url-to-object");
 const BetterSus = require("nhentai-js");
+const Bash = require("node-bash");
 const Bot = new Discord.Client({
 	intents: [
 		"GUILDS",
