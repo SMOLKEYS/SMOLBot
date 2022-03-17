@@ -8,7 +8,8 @@ const Sus = require("./sus/nsfw.js");
 const Buttons = require("./buttons.js");
 const Fetch = require("node-fetch");
 const Git = require("github-url-to-object");
-const BetterSus = require("nhentai-js");
+const NHentai = require("nhentai-js");
+const Porny = require("porny");
 const Bash = require("node-bash");
 const Bot = new Discord.Client({
 	intents: [
@@ -42,6 +43,7 @@ Bot.on("ready", () => {
 });
 
 Bot.on("messageCreate", msg => {
+try{
 	if(msg.author.bot) return;
 	if(!msg.content.startsWith(prefix)) return;
 
@@ -202,6 +204,7 @@ Bot.on("messageCreate", msg => {
        	}, 5 * 1000));
        	break;
     };
+} catch (e) {console.log(e.toString)};
 });
 
 Bot.on("interactionCreate", async interaction => {
