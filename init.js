@@ -43,7 +43,6 @@ Bot.on("ready", () => {
 });
 
 Bot.on("messageCreate", msg => {
-try{
 	if(msg.author.bot) return;
 	if(!msg.content.startsWith(prefix)) return;
 
@@ -204,7 +203,6 @@ try{
        	}, 5 * 1000));
        	break;
     };
-} catch (e) {console.log(e.toString)};
 });
 
 Bot.on("interactionCreate", async interaction => {
@@ -240,6 +238,16 @@ Bot.on("interactionCreate", async interaction => {
 			embeds:[],
 			components: []
 		});
+	};
+});
+
+Bot.on("uncaughtException", exp => {
+	const errorCh = Bot.channels.cache.get("953969487986712576");
+
+	try{
+		errorCh.send("Caught Error: " + exp.toString());
+	} catch (e) {
+		console.log(e.toString());
 	};
 });
 
