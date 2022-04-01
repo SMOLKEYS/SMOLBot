@@ -27,10 +27,10 @@ Bot.on("ready", () => {
 			type: "WATCHING"
 		});
 		
-		Bot.channels.cache.get("948818452678852628").send("Bot has initialized!");
+		Bot.channels.cache.get("948818452678852628").send("hewwo uwu~~");
 		
 		setTimeout(() => {
-			Bot.channels.cache.get("948818452678852628").send("Bot is restarting...");
+			Bot.channels.cache.get("948818452678852628").send("nuuuuu ;~;");
 		}, 6800 * 1000);
 		
 		setTimeout(() => {
