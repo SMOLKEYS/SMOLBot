@@ -23,7 +23,7 @@ const prefix = "sm!";
 
 
 Bot.on("ready", () => {
-		Bot.user.setActivity("everything", {
+		Bot.user.setActivity("your time of existence in such dimension", {
 			type: "WATCHING"
 		});
 		
@@ -52,7 +52,7 @@ Bot.on("messageCreate", msg => {
 
     switch(c){
     	case "ping":
-    	msg.reply("Pong!");
+    	msg.reply("smh getreal lmao");
     	break;
 
     	case "help":
@@ -70,7 +70,7 @@ Bot.on("messageCreate", msg => {
     	case "delayping":
     	const rnd = Math.floor(Math.random() * 25);
     	setTimeout(() => {
-    		msg.channel.send(rnd + " seconds!");
+    		msg.channel.send(rnd + " multilumiouz realities");
     	}, rnd * 1000);
     	break;
 
@@ -89,7 +89,7 @@ Bot.on("messageCreate", msg => {
     	case "av":
     	let user = msg.mentions.users.first() || msg.author;
     	const AvEmbed = new Discord.MessageEmbed()
-    	.setTitle("Avatar")
+    	.setTitle("Avatar (real)")
     	.setImage(user.displayAvatarURL() + "?size=2048");
     	msg.reply({
     		embeds: [
@@ -101,7 +101,7 @@ Bot.on("messageCreate", msg => {
     	case "nh":
     	const nArgs = msg.content.slice(5);
     	if(nArgs >= 70){
-    		console.log("No more than 69.");
+    		console.log("you cannot the 69+ betch");
     		return;
     	};
 
@@ -110,7 +110,7 @@ Bot.on("messageCreate", msg => {
     		if(msg.channel.nsfw == true){
     			nArr.push(Sus.nHentai(370000).toString());
     		} else {
-    			nArr.push("[redacted]/" + Math.floor(Math.random() * 370000));
+    			nArr.push("[unhorny]/" + Math.floor(Math.random() * 370000));
     		};
     	};
     	if(nArr.toString().length > 1990){
